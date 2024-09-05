@@ -1,0 +1,151 @@
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.42.176:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+ERROR:root:Error during prediction: Traceback (most recent call last):
+  File "C:\Users\User\Documents\cropwise_backend\app.py", line 49, in predict
+    'label': result.names[int(result.top1)],
+                              ^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python312\Lib\site-packages\ultralytics\utils\__init__.py", line 163, in __getattr__
+    raise AttributeError(f"'{name}' object has no attribute '{attr}'. See valid attributes below.\n{self.__doc__}")
+AttributeError: 'Results' object has no attribute 'top1'. See valid attributes below.
+
+    A class for storing and manipulating inference results.
+
+    This class encapsulates the functionality for handling detection, segmentation, pose estimation,
+    and classification results from YOLO models.
+
+    Attributes:
+        orig_img (numpy.ndarray): Original image as a numpy array.
+        orig_shape (Tuple[int, int]): Original image shape in (height, width) format.
+        boxes (Boxes | None): Object containing detection bounding boxes.
+        masks (Masks | None): Object containing detection masks.
+        probs (Probs | None): Object containing class probabilities for classification tasks.
+        keypoints (Keypoints | None): Object containing detected keypoints for each object.
+        obb (OBB | None): Object containing oriented bounding boxes.
+        speed (Dict[str, float | None]): Dictionary of preprocess, inference, and postprocess speeds.
+        names (Dict[int, str]): Dictionary mapping class IDs to class names.
+        path (str): Path to the image file.
+        _keys (Tuple[str, ...]): Tuple of attribute names for internal use.
+
+    Methods:
+        update: Updates object attributes with new detection results.
+        cpu: Returns a copy of the Results object with all tensors on CPU memory.
+        numpy: Returns a copy of the Results object with all tensors as numpy arrays.
+        cuda: Returns a copy of the Results object with all tensors on GPU memory.
+        to: Returns a copy of the Results object with tensors on a specified device and dtype.
+        new: Returns a new Results object with the same image, path, and names.
+        plot: Plots detection results on an input image, returning an annotated image.
+        show: Shows annotated results on screen.
+        save: Saves annotated results to file.
+        verbose: Returns a log string for each task, detailing detections and classifications.
+        save_txt: Saves detection results to a text file.
+        save_crop: Saves cropped detection images.
+        tojson: Converts detection results to JSON format.
+
+    Examples:
+        >>> results = model("path/to/image.jpg")
+        >>> for result in results:
+        ...     print(result.boxes)  # Print detection boxes
+        ...     result.show()  # Display the annotated image
+        ...     result.save(filename='result.jpg')  # Save annotated image
+    
+
+INFO:werkzeug:192.168.42.129 - - [26/Aug/2024 14:19:34] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+ERROR:root:Error during prediction: Traceback (most recent call last):
+  File "C:\Users\User\Documents\cropwise_backend\app.py", line 49, in predict
+    'label': result.names[int(result.top1)],
+                              ^^^^^^^^^^^
+  File "C:\Users\User\AppData\Local\Programs\Python\Python312\Lib\site-packages\ultralytics\utils\__init__.py", line 163, in __getattr__
+    raise AttributeError(f"'{name}' object has no attribute '{attr}'. See valid attributes below.\n{self.__doc__}")
+AttributeError: 'Results' object has no attribute 'top1'. See valid attributes below.
+
+    A class for storing and manipulating inference results.
+
+    This class encapsulates the functionality for handling detection, segmentation, pose estimation,
+    and classification results from YOLO models.
+
+    Attributes:
+        orig_img (numpy.ndarray): Original image as a numpy array.
+        orig_shape (Tuple[int, int]): Original image shape in (height, width) format.
+        boxes (Boxes | None): Object containing detection bounding boxes.
+        masks (Masks | None): Object containing detection masks.
+        probs (Probs | None): Object containing class probabilities for classification tasks.
+        keypoints (Keypoints | None): Object containing detected keypoints for each object.
+        obb (OBB | None): Object containing oriented bounding boxes.
+        speed (Dict[str, float | None]): Dictionary of preprocess, inference, and postprocess speeds.
+        names (Dict[int, str]): Dictionary mapping class IDs to class names.
+        path (str): Path to the image file.
+        _keys (Tuple[str, ...]): Tuple of attribute names for internal use.
+
+    Methods:
+        update: Updates object attributes with new detection results.
+        cpu: Returns a copy of the Results object with all tensors on CPU memory.
+        numpy: Returns a copy of the Results object with all tensors as numpy arrays.
+        cuda: Returns a copy of the Results object with all tensors on GPU memory.
+        to: Returns a copy of the Results object with tensors on a specified device and dtype.
+        new: Returns a new Results object with the same image, path, and names.
+        plot: Plots detection results on an input image, returning an annotated image.
+        show: Shows annotated results on screen.
+        save: Saves annotated results to file.
+        verbose: Returns a log string for each task, detailing detections and classifications.
+        save_txt: Saves detection results to a text file.
+        save_crop: Saves cropped detection images.
+        tojson: Converts detection results to JSON format.
+
+    Examples:
+        >>> results = model("path/to/image.jpg")
+        >>> for result in results:
+        ...     print(result.boxes)  # Print detection boxes
+        ...     result.show()  # Display the annotated image
+        ...     result.save(filename='result.jpg')  # Save annotated image
+    
+
+INFO:werkzeug:192.168.42.129 - - [26/Aug/2024 14:19:55] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.42.176:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:192.168.42.129 - - [26/Aug/2024 14:33:46] "POST /predict HTTP/1.1" 200 -
+INFO:werkzeug:192.168.42.129 - - [26/Aug/2024 14:35:06] "POST /predict HTTP/1.1" 200 -
+INFO:werkzeug:192.168.42.129 - - [26/Aug/2024 14:41:04] "POST /predict HTTP/1.1" 200 -
+INFO:werkzeug:192.168.42.129 - - [26/Aug/2024 14:47:08] "POST /predict HTTP/1.1" 200 -
+INFO:werkzeug:192.168.42.129 - - [26/Aug/2024 14:47:39] "POST /predict HTTP/1.1" 200 -
+INFO:werkzeug:192.168.42.129 - - [26/Aug/2024 14:48:18] "POST /predict HTTP/1.1" 200 -
+INFO:werkzeug:192.168.42.129 - - [26/Aug/2024 14:48:58] "[31m[1mPOST /predict HTTP/1.1[0m" 400 -
+INFO:werkzeug:192.168.42.129 - - [26/Aug/2024 14:49:06] "POST /predict HTTP/1.1" 200 -
+INFO:werkzeug:192.168.42.129 - - [26/Aug/2024 15:23:54] "POST /predict HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.43.175:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:192.168.43.1 - - [27/Aug/2024 12:34:29] "POST /predict HTTP/1.1" 200 -
+INFO:werkzeug:192.168.43.1 - - [27/Aug/2024 12:38:08] "POST /predict HTTP/1.1" 200 -
+INFO:werkzeug:192.168.43.1 - - [27/Aug/2024 12:40:01] "POST /predict HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.42.176:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:192.168.42.129 - - [29/Aug/2024 04:51:58] "POST /predict HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.43.175:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:192.168.43.1 - - [31/Aug/2024 13:26:53] "POST /predict HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.43.175:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:192.168.43.1 - - [04/Sep/2024 02:01:11] "POST /predict HTTP/1.1" 200 -
+INFO:werkzeug:192.168.43.1 - - [04/Sep/2024 02:01:50] "POST /predict HTTP/1.1" 200 -
+INFO:werkzeug:192.168.43.1 - - [04/Sep/2024 03:53:11] "POST /predict HTTP/1.1" 200 -
+INFO:werkzeug:192.168.43.1 - - [04/Sep/2024 03:56:36] "POST /predict HTTP/1.1" 200 -
+INFO:werkzeug:192.168.43.1 - - [04/Sep/2024 04:02:00] "POST /predict HTTP/1.1" 200 -
+INFO:werkzeug:192.168.43.1 - - [04/Sep/2024 04:02:54] "POST /predict HTTP/1.1" 200 -
+INFO:werkzeug:192.168.43.1 - - [04/Sep/2024 04:10:48] "POST /predict HTTP/1.1" 200 -
