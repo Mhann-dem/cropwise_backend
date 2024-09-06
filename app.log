@@ -149,3 +149,9 @@ INFO:werkzeug:192.168.43.1 - - [04/Sep/2024 03:56:36] "POST /predict HTTP/1.1" 2
 INFO:werkzeug:192.168.43.1 - - [04/Sep/2024 04:02:00] "POST /predict HTTP/1.1" 200 -
 INFO:werkzeug:192.168.43.1 - - [04/Sep/2024 04:02:54] "POST /predict HTTP/1.1" 200 -
 INFO:werkzeug:192.168.43.1 - - [04/Sep/2024 04:10:48] "POST /predict HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.43.175:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:192.168.43.1 - - [06/Sep/2024 06:05:12] "POST /predict HTTP/1.1" 200 -
